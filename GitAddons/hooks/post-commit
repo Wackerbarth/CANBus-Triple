@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+if [ "x$GIT_DIR" == "x" ] ; then
+	GIT_DIR=".git"
+fi
+source $GIT_DIR/hooks/post-checkout
