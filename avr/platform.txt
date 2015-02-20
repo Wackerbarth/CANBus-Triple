@@ -1,6 +1,33 @@
 name=CANBus Triple
 version=1.0
 
+upload.tool=avrdude
+upload.protocol=avr109
+upload.maximum_size=28672
+upload.maximum_data_size=2560
+upload.speed=57600
+upload.disable_flushing=true
+upload.use_1200bps_touch=true
+upload.wait_for_upload_port=true
+
+bootloader.tool=avrdude
+bootloader.low_fuses=0xff
+bootloader.high_fuses=0xd8
+bootloader.extended_fuses=0xcb
+bootloader.file=caterina/Caterina-hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x2F
+
+build.mcu=atmega32u4
+build.f_cpu=16000000L
+build.vid=0x2341
+build.pid=0x8036
+build.usb_product="CanBus Triple"
+# build.board=AVR_LEONARDO
+build.core=arduino
+build.variant=canbustriple
+build.extra_flags={build.usb_flags}
+
 
 # AVR compile variables
 # ---------------------
